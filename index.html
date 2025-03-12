@@ -1,99 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
-    <!-- head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Akbar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navbar -->
     <header>
-        <nav>
-            <h1>Portfolio</h1>
-            <ul>
+        <nav class="navbar">
+            <h1 class="logo">Portfolio</h1>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button>Download CV</button>
+            <button class="btn">Download CV</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div>
+    <section id="hero" class="hero">
+        <div class="hero-text">
             <h2>Hi, Saya Akbar 👋</h2>
-            <p>Deskripsi singkat tentang Akbar sebagai front-end developer.</p>
-            <p>Ciamis, Jawa Barat, Indonesia</p>
-            <p>Available for new projects</p>
+            <p>Saya seorang pengembang front-end dengan fokus pada React.js, 
+                berkomitmen untuk menciptakan pengalaman digital yang luar biasa cepat, aksesibel, 
+                menarik secara visual, dan responsif. Meskipun telah mengembangkan aplikasi web selama lebih dari 2 tahun, 
+                saya tetap menikmatinya seolah itu adalah sesuatu yang baru setiap harinya.</p>
+                <br><br>
+            <p class="location">📍 Ciamis, Jawa Barat, Indonesia</p>
+            <p class="availability">✅ Available for new projects</p>
         </div>
-        <div>
-            <img src="hero-image.jpg" alt="Foto Akbar">
+        <div class="hero-image">
+            <img src="akbarrr2.jpg" alt="Foto Akbar">
         </div>
     </section>
 
     <!-- About Me -->
-    <section id="about">
-        <h3>Penasaran dengan saya? Ini dia:</h3>
-        <p>Penjelasan tentang pengalaman dan keahlian Akbar sebagai pengembang front-end.</p>
+    <section id="about" class="about">
+        <h3>About Me</h3>
+        <p>Saya seorang pengembang front-end yang juga memiliki minat dalam desain, 
+            dengan fokus pada React.js. Saya sangat antusias dalam menghidupkan aspek teknis dan visual dari produk digital. 
+            Bagi saya, pengalaman pengguna, desain yang presisi, serta kode yang jelas, terbaca, 
+            dan berkinerja tinggi adalah hal yang penting.
+            Perjalanan saya sebagai pengembang web dimulai pada tahun 2023, dan sejak saat itu, 
+            saya terus berkembang dengan menghadapi tantangan baru serta mempelajari teknologi terbaru. 
+            Sekarang, setelah lebih dari 2 tahun di dunia pengembangan web, 
+            saya membangun aplikasi web modern menggunakan teknologi seperti Next.js, TypeScript, 
+            Tailwind CSS, dan lainnya.
+            Saya senang berpikir secara progresif dan menikmati bekerja dari tahap ideasi hingga pengembangan akhir. 
+            Di luar mode pengembang, Anda bisa menemukan saya di Twitter atau, mengikuti perjalanan startup baru, 
+            atau menikmati waktu luang. Saya juga membagikan wawasan teknologi dan proses pengembangan saya secara publik di Twitter dan GitHub.</p>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-        <h3>Skill, tools, dan teknologi yang saya kuasai:</h3>
-        <ul>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-            <li>TailwindCSS</li>
-            <li>Figma</li>
-            <li>Git</li>
-        </ul>
+    <section id="skills" class="skills">
+        <h3>Skills & Technologies</h3>
+        <div class="skills-container">
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>MongoDB</span>
+            <span>TailwindCSS</span>
+            <span>Figma</span>
+            <span>Git</span>
+        </div>
     </section>
 
     <!-- Work -->
-    <section id="work">
-        <h3>Beberapa project yang saya buat:</h3>
-        <div>
-            <h4>Project 1</h4>
-            <p>Pembuatan aplikasi rental mobil.</p>
+    <section id="work" class="work">
+        <h3>Projects</h3>
+        <div class="project">
+            <img src="proj1.png" alt="Project 1">
+            <div class="project-info">
+                <h4>Project 1</h4>
+                <p>Pembuatan aplikasi rental mobil.</p>
+            </div>
         </div>
-        <div>
-            <h4>Project 2</h4>
-            <p>Pembuatan aplikasi pemanfaatan barang bekas.</p>
+        <div class="project">
+            <img src="proj2.png" alt="Project 2">
+            <div class="project-info">
+                <h4>Project 2</h4>
+                <p>Pembuatan aplikasi pemanfaatan barang bekas.</p>
+            </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials">
-        <h3>Hal baik yang dikatakan orang tentang saya:</h3>
-        <div>
+    <section id="testimonials" class="testimonials">
+        <h3>Testimonials</h3>
+        <div class="testimonials-container">
+        <div class="testimonial">
             <p>"Pekerjaan yang sangat baik! Saya benar-benar terkesan." - William</p>
         </div>
-        <div>
+        <div class="testimonial">
             <p>"Orang yang luar biasa, sangat direkomendasikan." - Alex</p>
         </div>
-        <div>
+        <div class="testimonial">
             <p>"Akbar sangat mudah diajak bekerja sama." - Sujamal</p>
         </div>
+    </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-        <h3>Jangan ragu untuk menghubungi saya</h3>
-        <p>Email: akbar.welah.2018@gmail.com</p>
-        <p>Telepon: +6287791029456</p>
+    <section id="contact" class="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:akbar.welah.2018@gmail.com">akbar.welah.2018@gmail.com</a></p>
+        <p>Telepon: <a href="tel:+6287791029456">+6287791029456</a></p>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 | Designed by Akbar</p>
     </footer>
+
 </body>
 </html>
