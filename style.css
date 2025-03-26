@@ -35,29 +35,101 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.nav-links {
+/* Hamburger Menu - Always Visible */
+.hamburger-menu {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 200;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Navigation Links - Initially Hidden */
+.nav-links {
+    display: none;
     list-style: none;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: #111827;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 150;
+    padding: 0;
+    margin: 0;
     gap: 2rem;
+}
+
+.nav-links.active {
+    display: flex;
+    left: 0;
 }
 
 .nav-links a {
     color: #9ca3af;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ffffff;
+}
+
+/* Desktop Layout - Show Menu as Row */
+@media (min-width: 769px) {
+    .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+    }
+    
+    .nav-links.active {
+        left: auto;
+    }
 }
 
 .btn {
@@ -69,6 +141,7 @@ header {
     font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-left: auto;
 }
 
 .btn:hover {
@@ -209,7 +282,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Project 1 - Default layout (image on left) */
 .project img {
     width: 400px;
     height: auto;
@@ -221,7 +293,6 @@ header {
     text-align: left;
 }
 
-/* Project 2 - Reversed layout (image on right) */
 .project:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -263,7 +334,6 @@ header {
     border-bottom: 2px solid #6366f1;
 }
 
-/* Horizontal layout for testimonials */
 .testimonials-container {
     display: flex;
     align-items: center;
@@ -370,7 +440,7 @@ footer {
     color: #ffffff;
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -395,10 +465,6 @@ footer {
         width: 100%;
     }
     
-    .nav-links {
-        display: none;
-    }
-    
     .testimonials-container {
         flex-direction: column;
         align-items: center;
@@ -407,6 +473,10 @@ footer {
     .testimonial {
         width: 100%;
         max-width: 100%;
+    }
+    
+    .btn {
+        display: none;
     }
 }
 
@@ -445,7 +515,7 @@ footer {
     border-bottom: 2px solid #6366f1;
 }
 
-/* Add some animations */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
