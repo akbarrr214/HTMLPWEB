@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Akbar</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -116,8 +118,21 @@
     <!-- Contact -->
     <section id="contact" class="contact">
         <h3>Contact</h3>
-        <p>Email: <a href="mailto:akbar.welah.2018@gmail.com">akbar.welah.2018@gmail.com</a></p>
-        <p>Telepon: <a href="tel:+6287791029456">+6287791029456</a></p>
+        <form id="contact-form">
+            <div class="form-group">
+                <input type="text" name="fullName" id="fullName" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" id="phone" placeholder="Nomor Handphone">
+            </div>
+            <div class="form-group">
+                <textarea name="message" id="message" placeholder="Pesan"></textarea>
+            </div>
+            <button type="submit">Kirim</button>
+        </form>
     </section>
 
     <!-- Footer -->
