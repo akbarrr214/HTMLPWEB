@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - Akbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Include your existing navbar here -->
+
+    <div class="container mt-5">
+        <article class="blog-post">
+            <h1 class="mb-4">Judul Artikel</h1>
+            <div class="metadata mb-4">
+                <span class="text-muted">Oleh Akbar | 23 Jan 2024</span>
+            </div>
+            
+            <img src="article-header.jpg" class="img-fluid mb-4" alt="Article Header">
+            
+            <div class="content">
+                <p>Konten artikel anda...</p>
+            </div>
+
+            <!-- Share Buttons -->
+            <div class="share-buttons mt-4">
+                <button class="btn btn-primary"><i class="bi bi-facebook"></i> Share</button>
+                <button class="btn btn-info"><i class="bi bi-twitter"></i> Tweet</button>
+                <button class="btn btn-success"><i class="bi bi-whatsapp"></i> Share</button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="row mt-5">
+                <div class="col-6">
+                    <a href="#" class="btn btn-outline-primary">&larr; Artikel Sebelumnya</a>
+                </div>
+                <div class="col-6 text-end">
+                    <a href="#" class="btn btn-outline-primary">Artikel Selanjutnya &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="related-posts mt-5">
+                <h3>Artikel Terkait</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="related-1.jpg" class="card-img-top" alt="Related Article 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Artikel Terkait 1</h5>
+                                <a href="#" class="btn btn-primary">Baca</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more related articles -->
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section mt-5">
+                <h3>Komentar</h3>
+                <div class="comments">
+                    <!-- Existing comments -->
+                    <div class="comment mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">John Doe</h6>
+                                <p class="card-text">Komentar yang bagus!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment Form -->
+                <form class="mt-4">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Komentar</label>
+                        <textarea class="form-control" id="comment" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Komentar</button>
+                </form>
+            </div>
+        </article>
+    </div>
+
+    <!-- Include your existing footer here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
