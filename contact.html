@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontak Kami</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .contact-form {
+            background: #fff; padding: 24px; max-width: 400px; margin: 40px auto; border-radius: 8px; box-shadow: 0 2px 8px #ccc;
+        }
+        .contact-form h2 { margin-bottom: 16px; }
+        .contact-form label { display: block; margin-bottom: 6px; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 8px; margin-bottom: 14px; border: 1px solid #ccc; border-radius: 4px;
+        }
+        .contact-form button {
+            background: #007bff; color: #fff; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer;
+        }
+        .contact-form button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <form class="contact-form" action="save_contact.php" method="post">
+        <h2>Kontak Kami</h2>
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+</html>
